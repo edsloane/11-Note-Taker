@@ -30,6 +30,11 @@ app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
+// Default
+app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "public/index.html"));
+});
+
 
 // API Routes
 // Reads the json file
@@ -50,7 +55,6 @@ app.post("/api/notes", function(req, res) {
         data[data.length - 1].id = data.length - 1;
         writeFileAsync("./db/db.json", JSON.stringify(data));
         res.json(data);
-        console.log("Note succesfully created!");
     });
 });
 
@@ -65,7 +69,6 @@ app.delete("/api/notes/:id", function(req, res) {
         }
         writeFileAsync("./db/db.json", JSON.stringify(data));
         res.json(data);
-        console.log("Note succesfully removed!");
     });
 });
 
