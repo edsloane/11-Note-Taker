@@ -14,7 +14,7 @@ An application that can be used to write, save, and delete notes using an expres
 * [Questions](#questions)
 
 ### Installation:
-Can be run on a locally created server by installing dependancies or via ![Heroku](https://enigmatic-atoll-72916.herokuapp.com/)
+Can be run on a locally created server by installing dependancies or via [Heroku](https://enigmatic-atoll-72916.herokuapp.com/)
 
 ### Usage:
   Using the command line, navigate your way to the folder containing your index.js file.
